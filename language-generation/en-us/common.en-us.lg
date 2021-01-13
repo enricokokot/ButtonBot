@@ -1,0 +1,17 @@
+# WelcomeUser()
+- Dobrodošli u ButtonBot.
+- Želim vam dobrodošlicu u ButtonBot.
+- Bok, ja sam ButtonBot.
+
+# OpcijaPodopcija()
+- Odabrali ste ${user.choice}, ${user.choice2}.
+
+# Thirdwheeling()
+- Čini se da nisam potreban.
+- U redu, vidim da vam tu ne mogu pomoći.
+
+# DaljnjePoteskoce()
+- Ukoliko imate daljnjih poteškoća javite se šefu IT odjela na mail sefITa@mailodfirme.com
+
+# OstalePoteskoce()
+- Javite se šefu IT odjela za ostale poteškoće na mail sefITa@mailodfirme.com

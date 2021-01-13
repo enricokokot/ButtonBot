@@ -1,0 +1,6 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_dzcTUm()
+- Zamolili bi vas da odvojite vrijeme za ocjenu efikasnosti chatbota.
+# SendActivity_PQuAz0()
+- Korisnik je [${user.choice},${user.choice2}] interakciju sa chatbotom ocjenio sa ${user.grade}.

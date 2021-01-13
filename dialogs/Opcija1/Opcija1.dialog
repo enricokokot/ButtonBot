@@ -1,0 +1,121 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "4vZrfi",
+    "name": "Opcija1",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "Q7MT5b"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "u3bW9m"
+          },
+          "activity": "${SendActivity_u3bW9m()}"
+        },
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "s8Brxi"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": true,
+          "prompt": "${ChoiceInput_Prompt_s8Brxi()}",
+          "unrecognizedPrompt": "${ChoiceInput_UnrecognizedPrompt_s8Brxi()}",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "choices": [
+            "Zaboravio sam lozinku",
+            "Želio bih promjeniti lozinku",
+            "Ništa od ponuđenog"
+          ],
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          },
+          "property": "user.choice2",
+          "style": "heroCard"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "WLVM2D"
+          },
+          "condition": "user.choice2",
+          "cases": [
+            {
+              "value": "Zaboravio sam lozinku",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "W9bOeL"
+                  },
+                  "activity": "${SendActivity_W9bOeL()}"
+                }
+              ]
+            },
+            {
+              "value": "Želio bih promjeniti lozinku",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "NZo3uP"
+                  },
+                  "activity": "${SendActivity_NZo3uP()}"
+                }
+              ]
+            },
+            {
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "cYdNXU"
+                  },
+                  "activity": "${SendActivity_cYdNXU()}"
+                }
+              ],
+              "value": "Ništa od ponuđenog"
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "H4dBaq"
+              },
+              "activity": "${SendActivity_H4dBaq()}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "Opcija1.lg",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": []
+  },
+  "id": "Opcija1"
+}

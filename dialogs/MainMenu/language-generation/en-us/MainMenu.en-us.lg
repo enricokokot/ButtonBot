@@ -1,0 +1,8 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_16aLhd()
+- Kako vam mogu pomoći?
+# ChoiceInput_UnrecognizedPrompt_16aLhd()
+- Molim odaberite jednu od ponuđenih opcija.
+# SendActivity_A1562N()
+- ${Thirdwheeling()}

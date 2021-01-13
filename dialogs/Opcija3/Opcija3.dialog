@@ -1,0 +1,143 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "kKyzYp",
+    "name": "Opcija3",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "qDySPR"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "Jtsfx1"
+          },
+          "activity": "${SendActivity_Jtsfx1()}"
+        },
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "ceQbXd"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": true,
+          "prompt": "${ChoiceInput_Prompt_ceQbXd()}",
+          "unrecognizedPrompt": "${ChoiceInput_UnrecognizedPrompt_ceQbXd()}",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "choices": [
+            "Upute za korištenje uredskog softwarea",
+            "Mogućnost postavljanja podsjetnika",
+            "Ništa od ponuđenog"
+          ],
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          },
+          "property": "user.choice2",
+          "style": "heroCard"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "7OS4bU"
+          },
+          "condition": "user.choice2",
+          "cases": [
+            {
+              "value": "Upute za korištenje uredskog softwarea",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "RbPaRN"
+                  },
+                  "activity": "${SendActivity_RbPaRN()}"
+                }
+              ]
+            },
+            {
+              "value": "Mogućnost postavljanja podsjetnika",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "pOgPeg"
+                  },
+                  "activity": "${SendActivity_pOgPeg()}"
+                }
+              ]
+            },
+            {
+              "value": "Ništa od ponuđenog",
+              "actions": [
+                {
+                  "$kind": "Microsoft.DeleteProperty",
+                  "$designer": {
+                    "id": "2ZYmJ4"
+                  },
+                  "property": "user.choice2"
+                },
+                {
+                  "$kind": "Microsoft.TextInput",
+                  "$designer": {
+                    "id": "Wqt3uy"
+                  },
+                  "disabled": false,
+                  "maxTurnCount": 2,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": true,
+                  "prompt": "${TextInput_Prompt_Wqt3uy()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "property": "user.choice2"
+                },
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "sHPIlD"
+                  },
+                  "activity": "${SendActivity_sHPIlD()}"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "14qVcR"
+              },
+              "activity": "${SendActivity_14qVcR()}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "Opcija3.lg",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": []
+  },
+  "id": "Opcija3"
+}

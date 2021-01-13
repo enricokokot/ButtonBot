@@ -1,0 +1,30 @@
+[import](common.lg)
+
+# SendActivity_xcjlOV()
+- Čini se da imate tehničkih problema.
+# ChoiceInput_Prompt_SkmFIL()
+- Idemo to srediti. U čemu je problem?
+# ChoiceInput_UnrecognizedPrompt_SkmFIL()
+- Molim odaberite jednu od ponuđenih opcija.
+# SendActivity_g1XzHU()
+- ${Thirdwheeling()}
+# SendActivity_KbDkiV()
+- ${PonovnoPokretanjeUpute()}
+# SendActivity_7V31yH()
+- ${ProvjeraKablovaUpute()}
+# SendActivity_xwPsdK()
+- ${OstalePoteskoce()}
+
+# PonovnoPokretanjeUpute
+[HeroCard
+    title = Kako ponovno pokrenuti računalo
+    text = Ukoliko računalo ne reagira na vaše podražaje duže od 5 minuta biti ćete prisiljeni ponovno ga pokrenuti pritiskom na gumb za pokretanje na njegovoj prednjoj strani.\n\n${DaljnjePoteskoce()}
+    image = https://www.lifewire.com/thmb/7A1aWZByj_4cCF5pe4RScF1oWNc=/1920x1080/smart/filters:no_upscale()/power-button-bb823922c3e94579ab285aa33c7b4d20-f363a15db38c49b39f221922a047202b.png
+]
+
+# ProvjeraKablovaUpute
+[HeroCard
+    title = Kako utvrditi povezanost periferije računala
+    text = Za slučaj da ste sigurni da vam periferni alati ne uspostavljaju komunikaciju s računalom utvrdite da su pravilno spojeni.\n\n${DaljnjePoteskoce()}
+    image = https://comps.canstockphoto.com/disconnected-usb-cable-detail-stock-photo_csp67962921.jpg
+]

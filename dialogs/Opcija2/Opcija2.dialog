@@ -1,0 +1,121 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "V7LVBZ",
+    "name": "Opcija2",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "b8kna1"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "xcjlOV"
+          },
+          "activity": "${SendActivity_xcjlOV()}"
+        },
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "SkmFIL"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": true,
+          "prompt": "${ChoiceInput_Prompt_SkmFIL()}",
+          "unrecognizedPrompt": "${ChoiceInput_UnrecognizedPrompt_SkmFIL()}",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "choices": [
+            "Računalo mi se zamrznulo",
+            "Tipkovnica/miš mi ne radi",
+            "Nešto treće"
+          ],
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          },
+          "property": "user.choice2",
+          "style": "heroCard"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "AoY6zX"
+          },
+          "condition": "user.choice2",
+          "cases": [
+            {
+              "value": "Računalo mi se zamrznulo",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "KbDkiV"
+                  },
+                  "activity": "${SendActivity_KbDkiV()}"
+                }
+              ]
+            },
+            {
+              "value": "Tipkovnica/miš mi ne radi",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "7V31yH"
+                  },
+                  "activity": "${SendActivity_7V31yH()}"
+                }
+              ]
+            },
+            {
+              "value": "Nešto treće",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "xwPsdK"
+                  },
+                  "activity": "${SendActivity_xwPsdK()}"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "g1XzHU"
+              },
+              "activity": "${SendActivity_g1XzHU()}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "Opcija2.lg",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": []
+  },
+  "id": "Opcija2"
+}

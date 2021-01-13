@@ -1,0 +1,30 @@
+[import](common.lg)
+
+# SendActivity_u3bW9m()
+- Vidim da imate problema sa lozinkom.
+# ChoiceInput_Prompt_s8Brxi()
+- Kako vam točno mogu pomoći?
+# ChoiceInput_UnrecognizedPrompt_s8Brxi()
+- Molim odaberite jednu od ponuđenih opcija.
+# SendActivity_H4dBaq()
+- ${Thirdwheeling()}
+# SendActivity_W9bOeL()
+- ${IzgubljenaLozinkaUpute()}
+# SendActivity_NZo3uP()
+- ${PromjenaLozinkeUpute()}
+# SendActivity_cYdNXU()
+- Javite se šefu IT odjela za ostale poteškoće na mail sefITa@mailodfirme.com
+
+# IzgubljenaLozinkaUpute
+[HeroCard
+    title = Kako resetirati izgubljenu lozinku
+    text = Na stranici za prijavu ispod obrazaca za e-mail i lozinku nalazi se gumb "Zaboravio sam lozinku" na koji možete kliknuti i slijediti upute.\n\n${DaljnjePoteskoce()}
+    image = https://help.leadsquared.com/wp-content/uploads/2017/09/Forgot-Password.png
+]
+
+# PromjenaLozinkeUpute
+[HeroCard
+    title = Kako promjeniti lozinku
+    text = Nakon što ste se uspješno prijavili u sustav potražite u gornjem desnom kutu vašu sliku profila i nakon pritiska na nju odaberite opciju "Privatnost". U novonastalom meniju potražite gumb "Nova šifra" i nakon klika na njega slijedite daljnje upute.\n\n${DaljnjePoteskoce()}
+    image = https://support.pipedrive.com/hc/article_attachments/360000213717/change_password.png
+]

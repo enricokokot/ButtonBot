@@ -1,0 +1,23 @@
+[import](common.lg)
+
+# SendActivity_Jtsfx1()
+- Čini se da vam ne možemo pomoći sa ponuđenim opcijama.
+# ChoiceInput_Prompt_ceQbXd()
+- Koja bi od ovih mogućnosti najbolje odgovara vašim potrebama?
+# ChoiceInput_UnrecognizedPrompt_ceQbXd()
+- Molim odaberite jednu od ponuđenih opcija.
+# SendActivity_14qVcR()
+- ${Thirdwheeling()}
+# TextInput_Prompt_Wqt3uy()
+- Upišite koju mogućnost biste Vi dodali chatbotu.
+
+# ZahvalaNaSudjelovanju
+- Hvala Vam što ste dali svoje mišljenje 🙂
+- Hvala Vam što mi pomažete u usavršavanju 😄
+
+# SendActivity_RbPaRN()
+- ${ZahvalaNaSudjelovanju()}
+# SendActivity_pOgPeg()
+- ${ZahvalaNaSudjelovanju()}
+# SendActivity_sHPIlD()
+- ${ZahvalaNaSudjelovanju()}

@@ -1,0 +1,143 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "GcMx89",
+    "name": "MainMenu",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "oKr8Jd"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "16aLhd"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": true,
+          "prompt": "${ChoiceInput_Prompt_16aLhd()}",
+          "unrecognizedPrompt": "${ChoiceInput_UnrecognizedPrompt_16aLhd()}",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "choices": [
+            "Imam problema sa lozinkom",
+            "Imam tehničkih problema",
+            "Ništa od ponuđenog"
+          ],
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          },
+          "property": "user.choice",
+          "style": "heroCard"
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "I2TFHI"
+          },
+          "condition": "user.choice",
+          "cases": [
+            {
+              "value": "Imam problema sa lozinkom",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "ZkLCK7"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "Opcija1"
+                }
+              ]
+            },
+            {
+              "value": "Imam tehničkih problema",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "LxXnSD"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "Opcija2"
+                }
+              ]
+            },
+            {
+              "value": "Ništa od ponuđenog",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "eDcgBz"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "Opcija3"
+                }
+              ]
+            }
+          ],
+          "default": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "A1562N"
+              },
+              "activity": "${SendActivity_A1562N()}"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "thGAOf"
+          },
+          "activityProcessed": true,
+          "dialog": "Ocjena"
+        },
+        {
+          "$kind": "Microsoft.DeleteProperties",
+          "$designer": {
+            "id": "8QkNS5"
+          },
+          "properties": [
+            "user.choice",
+            "user.choice2",
+            "user.grade"
+          ]
+        },
+        {
+          "$kind": "Microsoft.RepeatDialog",
+          "$designer": {
+            "id": "EAZB2G"
+          },
+          "activityProcessed": true
+        }
+      ]
+    }
+  ],
+  "generator": "MainMenu.lg",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": []
+  },
+  "id": "MainMenu"
+}
